@@ -9,7 +9,7 @@ const createPost = async (post) => {
   const user = await userService.getUser(newPost.user);
   user.posts.push(newPost);
   await user.save();
-  return post;
+  return newPost;
 };
 
 const getPost = async (postId) => {
